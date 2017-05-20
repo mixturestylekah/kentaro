@@ -1,0 +1,15 @@
+.main
+  .main-image
+
+.tag_name
+  h3= @tag.name
+
+.content
+  ul.blog
+    = render @blogs
+
+.tag_name
+  - if @related_tags.any?
+    h3 Related Tags
+
+    = react_component('TagList', { tags: @related_tags })

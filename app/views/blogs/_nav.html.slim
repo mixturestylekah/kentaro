@@ -1,0 +1,14 @@
+.nav
+  .nav_content
+    ul
+      li data-behavior="editor-message"
+      li.publish-button
+        button.dropdown-toggle.button data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" 投稿する
+
+        ul.dropdown-menu.publish-dropdown.nav-dropdown
+          .container
+            p 記事にタグを追加する
+            .clearfix data-behavior="tags" data-tags="<%= @blog.all_tags %>"
+              #js-taggle data-behavior="autosave"
+
+            button data-behavior="publish-button" 投稿する

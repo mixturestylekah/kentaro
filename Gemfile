@@ -11,6 +11,7 @@ gem 'rails', '5.1.0'
 # Authorization
 gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
 gem 'erubis'
+gem 'cancancan'
 
 # Asset
 gem 'sass-rails', '~> 5.0'
@@ -18,11 +19,18 @@ gem 'turbolinks', '~> 5'
 gem 'puma', '~> 3.7'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 
 # Model
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'kaminari'
+gem 'annotate', "2.7.1"
+gem 'friendly_id', '~> 5.0.0'
 
 # Background work
 gem 'sidekiq'
@@ -30,11 +38,14 @@ gem 'sinatra', require: false
 
 # View
 gem 'react-rails'
-gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'slim-rails'
 gem 'jbuilder', '~> 2.5'
-gem 'kaminari'
+
+# Admin
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'active_material', github: 'vigetlabs/active_material'
 
 # Search
 gem 'elasticsearch-rails'

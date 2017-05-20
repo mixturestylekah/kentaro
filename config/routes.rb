@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :blogs,  only: [:index, :new, :create]
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
-  root "blogs#index"
+  resources :blogs
+  resources :tags, only: :show
+
+  namespace :api do
+    resources :blogs, only: [:create, :update, :destroy]
+    resources :tags,  only: :create
+  end
+
+  root 'blogs#index'
 end

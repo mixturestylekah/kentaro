@@ -1,0 +1,19 @@
+- if @blog.image?
+  = image_tag @blog.image.url(:thumb)
+= image_tag "top.jpg", height: "600px", width: "100%"
+
+.blog_main
+  .blog_main-description
+    p= @blog.description
+
+  .body
+    = remove_javascript(@blog.body).html_safe
+
+  .blog_main-tags
+    - @blog.tags.each do |tag|
+      = link_to tag.name, tag, class: 'tag'
+
+- if @related_blogs.any?
+  h4 Related blogs
+    - @related_blogs.each do |blog|
+      = render partial: 'blogs/blog', locals: { blog: blog }

@@ -1,0 +1,86 @@
+.editor-form {
+  margin-top: 20px;
+  position: relative;
+
+  .editor-title {
+    border: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    outline: 0;
+  }
+
+  .medium-editable {
+    min-height: 300px;
+    outline: none;
+    line-height: 1.5;
+    position: relative;
+    left: -60px;
+    padding-left: 60px;
+  }
+
+  &_body {
+    outline: 0;
+    position: relative;
+    line-height: 1.5;
+    font-size: 20px;
+    min-height: 350px;
+    border: 0;
+    width: 100%;
+  }
+
+  .form-section {
+    margin-bottom: 20px;
+  }
+
+  .image_upload {
+    position: absolute;
+    left: -40px;
+    top: 115px;
+
+    input[type="file"] {
+      position: fixed;
+      top: -100px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      color: $primary-color;
+    }
+  }
+}
+
+.image_upload {
+  border: 1px solid $border-color;
+  color: $border-color;
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  position: relative;
+
+  .fa-camera {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+}
+
+.medium-insert-buttons {
+  a {
+    color: $border-color;
+  }
+}
+
+.medium-editor-insert-plugin.medium-editor-placeholder:after {
+  color: $border-color;
+  padding-left: 60px;
+}

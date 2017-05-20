@@ -1,1 +1,8 @@
-h1 テスト
+.main
+  .main-image
+
+.content
+  ul.blog
+    = render @blogs
+
+  = paginate(@blogs)

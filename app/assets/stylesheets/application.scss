@@ -1,0 +1,16 @@
+// Application
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import 'lib/*';
+@import "base";
+@import "modules/*";
+@import "layouts/*";
+
+@import 'vendor/medium-editor';
+@import 'vendor/medium-editor-insert-plugin';
+@import 'vendor/medium-editor-insert-plugin-frontend';
+@import 'vendor/flat';
+@import 'vendor/taggle';

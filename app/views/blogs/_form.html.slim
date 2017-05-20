@@ -1,0 +1,25 @@
+= form_for @blog, html: { multipart: true, class: 'editor-form', data: { page: 'main-editor' }, autocomplete: "off" } do |f|
+
+  .image_upload
+    = f.file_field :image
+    <i class="fa fa-camera" aria-hidden="true"></i>
+
+  .image_upload-preview.hidden
+    img#image_preview src=""
+
+  - if @blog.image?
+    .image-preview#image-preview
+      = image_tag blog.image.url(:top)
+
+  .form-section
+    = f.label :description, "要約"
+    = f.text_area :description, placeholder: "要約を記入(100文字以内)"
+
+  .form-section
+    = f.text_field :title, class: 'editor-title', placeholder: 'タイトル', autofocus: true, data: { behavior: "autosave" }, onfocus: "this.value = this.value;"
+
+  .form-section
+    = f.text_area :body, class: 'medium-editable', data: { behavior: "autosave" }
+
+  .hidden
+    = f.text_field :all_tags

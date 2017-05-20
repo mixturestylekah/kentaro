@@ -1,0 +1,13 @@
+li.blog_item
+  = link_to blog, class: "blog_item-link"
+    - if blog.image?
+      = image_tag blog.image.url(:thumb)
+    = image_tag "top.jpg", width: "349.05px", height: "250px"
+
+    .blog_item-content
+      h2= blog.title
+      p= blog.description
+
+  .blog_tags
+    - blog.tags.each do |tag|
+      = link_to tag.name, tag, class: 'tag'

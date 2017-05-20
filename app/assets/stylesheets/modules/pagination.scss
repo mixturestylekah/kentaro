@@ -1,0 +1,39 @@
+.paginate {
+  color: $primary-color;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  a {
+    display: inline-block;
+    width: 32px;
+    margin: 0 4px;
+    transition: 400ms;
+    border: 1px solid $primary-color;
+    border-radius: 2px;
+    color: $primary-color;
+    line-height: 30px;
+
+    &:hover {
+      border-color: $primary-color;
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+
+  .page.current {
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .page.gap {
+    margin-left: 4px;
+    vertical-align: bottom;
+  }
+}
+
+.paginate {
+
+}

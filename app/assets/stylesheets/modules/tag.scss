@@ -1,0 +1,29 @@
+.tag_name {
+  margin-top: 40px;
+  text-align: center;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &-item {
+    margin: 20px 0 40px 0;
+
+
+    .tag {
+      padding: 10px 12px;
+      background: rgba(0,0,0,0.05);
+      text-transform: capitalize;
+      color: rgba(0,0,0,0.6);
+      font-size: 18px;
+      border-radius: 3px;
+      margin-right: 20px;
+      margin-bottom: 8px;
+
+      &:hover {
+        background: rgba(0,0,0,0.1)
+      }
+    }
+  }
+}

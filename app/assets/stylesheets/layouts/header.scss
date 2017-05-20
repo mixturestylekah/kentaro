@@ -1,0 +1,26 @@
+.header {
+  padding: 50px 60px 0;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  &-link {
+    font-size: 17px;
+    margin-left: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.blogs_controller {
+  &.new_action {
+    .header {
+      position: inherit;
+
+      &-link {
+        color: #fc3768;
+      }
+    }
+  }
+}
