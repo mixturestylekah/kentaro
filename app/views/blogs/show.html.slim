@@ -1,6 +1,16 @@
-- if @blog.image?
-  = image_tag @blog.image.url(:thumb)
-= image_tag "top.jpg", height: "600px", width: "100%"
+.blog-image
+  = attachment_image_tag @blog ,:image, :fill, 1280, 600, fallback: 'top.jpg', class: 'cover-image'
+
+  .blog-image_text
+    h1= @blog.title
+
+  .blog_author
+    
+
+.blog_edit
+  - if user_signed_in? && current_user?(@blog.user)
+    = link_to "編集する", edit_blog_path(@blog), class: 'button primary-button'
+    = link_to "削除する", blog_path(@blog), method: :delete, class: 'button warning-button'
 
 .blog_main
   .blog_main-description
@@ -13,7 +23,12 @@
     - @blog.tags.each do |tag|
       = link_to tag.name, tag, class: 'tag'
 
+  .blog_author
+    = link_to user_path(@blog.user)
+
 - if @related_blogs.any?
   h4 Related blogs
     - @related_blogs.each do |blog|
       = render partial: 'blogs/blog', locals: { blog: blog }
+
+= render'blog_underbar'

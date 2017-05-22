@@ -2,16 +2,17 @@
 #
 # Table name: blogs
 #
-#  id           :integer          not null, primary key
-#  title        :string(255)
-#  body         :text(65535)
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#  user_id      :integer
-#  image        :string(255)
-#  description  :string(255)
-#  published_on :date
-#  status       :string(255)      default("0"), not null
+#  id                 :integer          not null, primary key
+#  title              :string(255)
+#  body               :text(65535)
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  user_id            :integer
+#  image_id           :string(255)
+#  description        :string(255)
+#  published_at       :datetime
+#  slug               :string(255)
+#  image_content_type :string(255)
 #
 
 class Blog < ApplicationRecord
@@ -28,7 +29,7 @@ class Blog < ApplicationRecord
   validates :body,        presence: true
   validates :description, presence: true
 
-  mount_uploader :image, ImageUploader
+  attachment :image
 
   scope :published, -> { where.not(published_at: nil) }
   scope :drafts, -> { where(published_at: nil) }
@@ -62,6 +63,10 @@ class Blog < ApplicationRecord
     self.published_at = Time.zone.now
     self.slug = nil
     save
+  end
+
+  def published?
+    published_at.present?
   end
 
   def save_as_draft

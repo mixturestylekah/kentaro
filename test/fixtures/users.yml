@@ -16,9 +16,10 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  description            :text(65535)
-#  profileimage           :string(255)
+#  image_id               :string(255)
 #  slug                   :string(255)      default(""), not null
 #  name                   :string(255)
+#  image_content_type     :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

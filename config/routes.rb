@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
   resources :blogs
   resources :tags, only: :show
+  resources :users, only: :show
 
   namespace :api do
     resources :blogs, only: [:create, :update, :destroy]
     resources :tags,  only: :create
+    resources :users, only: :show
   end
 
   root 'blogs#index'

@@ -4,12 +4,27 @@
   z-index: 1;
   width: 100%;
 
+  @include phone {
+    margin: auto;
+    padding: inherit;
+    top: 35%;
+    left: 0;
+    right: 0;
+    max-width: 65%;
+  }
+
   &-link {
     font-size: 17px;
     margin-left: 40px;
     color: white;
     text-decoration: none;
     font-weight: bold;
+
+    @include phone {
+      margin: inherit;
+      font-size: 26px;
+      letter-spacing: 2.8px;
+    }
   }
 }
 
@@ -20,6 +35,29 @@
 
       &-link {
         color: #fc3768;
+      }
+    }
+  }
+}
+
+.blogs_controller {
+  &.show_action {
+    .header {
+
+      @include phone {
+        margin: inherit;
+        max-width: inherit;
+        padding: 30px 20px 0;
+        top: 0;
+      }
+
+      &-link {
+
+        @include phone {
+          margin-left: 20px;
+          font-size: 17;
+          letter-spacing: 1.8;
+        }
       }
     }
   }

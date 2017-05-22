@@ -1,15 +1,10 @@
 = form_for @blog, html: { multipart: true, class: 'editor-form', data: { page: 'main-editor' }, autocomplete: "off" } do |f|
 
   .image_upload
-    = f.file_field :image
-    <i class="fa fa-camera" aria-hidden="true"></i>
+    = f.attachment_field :image
 
   .image_upload-preview.hidden
     img#image_preview src=""
-
-  - if @blog.image?
-    .image-preview#image-preview
-      = image_tag blog.image.url(:top)
 
   .form-section
     = f.label :description, "要約"

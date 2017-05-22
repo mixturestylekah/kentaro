@@ -1,5 +1,4 @@
 class BlogsController < ApplicationController
-  before_action :authenticate_user!, only: :show
   before_action :authorize_user, only: [:edit, :update, :destroy]
 
   def index
@@ -35,6 +34,7 @@ class BlogsController < ApplicationController
 
   def update
     @blog.assign_attributes(blog_params)
+
     if @blog.publish
       redirect_to @blog, notice: "更新できました！"
     else

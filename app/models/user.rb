@@ -16,9 +16,10 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  description            :text(65535)
-#  profileimage           :string(255)
+#  image_id               :string(255)
 #  slug                   :string(255)      default(""), not null
 #  name                   :string(255)
+#  image_content_type     :string(255)
 #
 
 class User < ApplicationRecord
@@ -29,10 +30,9 @@ class User < ApplicationRecord
 
   has_many :blogs, dependent: :destroy
 
-  #validates :name,         presence: true
-  #validates :slug,         presence: true, uniqueness: true
-  #validates :description,  presence: true
-  #validates :profileimage, presence: true
+  attachment :image
 
-  mount_uploader :profileimage, ProfileimageUploader
+  validates :name,         presence: true
+  validates :slug,         presence: true, uniqueness: true
+  validates :description,  presence: true
 end

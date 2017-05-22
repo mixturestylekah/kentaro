@@ -5,3 +5,24 @@
   color: lighten($font-color, 5%);
   font-size: 14px;
 }
+
+
+.primary-button {
+  border-color: $primary-color;
+  color: $primary-color;
+
+  &:hover {
+    color: white;
+    background-color: $primary-color;
+  }
+}
+
+.warning-button {
+  border-color: $complementary-color;
+  color: $complementary-color;
+
+  &:hover {
+    background-color: $complementary-color;
+    color: white;
+  }
+}

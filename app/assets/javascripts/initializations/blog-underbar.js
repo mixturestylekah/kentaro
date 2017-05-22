@@ -1,6 +1,6 @@
-var BlogBar = {
+var BlogUnderbar = {
   init: function() {
-    if (!$('[data-page="blog-bar"]').length > 0) {
+    if (!$('[data-page="blog-underbar"]').length > 0) {
       return;
     }
 
@@ -21,5 +21,5 @@ var BlogBar = {
   }
 };
 
-$(document).ready( BlogBar.init );
-$(document).on( 'page:load', BlogBar.init );
+$(document).ready( BlogUnderbar.init );
+$(document).on( 'page:load', BlogUnderbar.init );

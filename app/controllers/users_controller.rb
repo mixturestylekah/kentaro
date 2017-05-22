@@ -9,4 +9,8 @@ class UsersController < ApplicationController
   def set_user
     @user = User.friendly.find(params[:id])
   end
+
+  def user_params
+    params.require(:user).permit(:description, :name)
+  end
 end

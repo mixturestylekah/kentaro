@@ -1,8 +1,6 @@
 li.blog_item
-  = link_to blog, class: "blog_item-link"
-    - if blog.image?
-      = image_tag blog.image.url(:thumb)
-    = image_tag "top.jpg", width: "349.05px", height: "250px"
+  = link_to blog, class: "blog_item-link" do
+    = attachment_image_tag blog ,:image, :fill, 349.05, 250, fallback: 'top.jpg', width: "349.05px", height: "250px"
 
     .blog_item-content
       h2= blog.title

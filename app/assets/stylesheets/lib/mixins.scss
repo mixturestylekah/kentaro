@@ -1,0 +1,22 @@
+$width-desktop:1024px;
+$width-tablet:768px;
+$width-smartphone:568px;
+
+@mixin desktop {
+  //PC表示: 768+20=788px〜
+  @media (min-width: $width-tablet) {
+    @content;
+  }
+}
+@mixin tablet {
+  //タブレット表示
+  @media (min-width: $width-smartphone) and (max-width: $width-tablet - 1) {
+    @content;
+  }
+}
+@mixin phone {
+  //スマホ表示
+  @media (max-width: $width-smartphone - 1) {
+    @content;
+  }
+}

@@ -25,9 +25,8 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 
 # Model
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'fog'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
 gem 'kaminari'
 gem 'annotate', "2.7.1"
 gem 'friendly_id', '~> 5.0.0'
