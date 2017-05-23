@@ -1,0 +1,2 @@
+h3 最新の投稿
+= render Blog.order(created_at: :desc).limit(3)

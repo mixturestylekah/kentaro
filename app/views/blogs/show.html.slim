@@ -29,4 +29,11 @@
     - @related_blogs.each do |blog|
       = render partial: 'blogs/blog', locals: { blog: blog }
 
-= render'blog_underbar'
+.blog_content
+  = render 'shared/blog_new', type: :new
+
+.blog_content-tag
+  = render "shared/tag_list"
+
+
+= render partial: 'blogs/blog_underbar', locals: { blog: @blog }

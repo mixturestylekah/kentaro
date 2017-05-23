@@ -10,6 +10,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @tags = Tag.all
     @blog = Blog.friendly.find(params[:id])
     @related_blogs = @blog.related_blogs
 

@@ -47,10 +47,6 @@
     width: 100%;
     height: 60px;
 
-    @include phone {
-      height: 45px;
-    }
-
     &.is-inView {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
@@ -255,5 +251,153 @@
 
   .blog {
     margin: 0;
+  }
+}
+
+.sns-share-list {
+  max-width: 70%;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  @include phone {
+    max-width: 80%;
+  }
+
+  .hatena-image {
+    background-image: url("hatena-logo.svg");
+    background-size: 60%;
+    height: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 20%;
+
+    &:hover {
+      background-image: url("hatena-logo-hover.svg");
+      background-color: $hatena-color;
+      border-radius: 20%;
+      -webkit-transition: all cubic-bezier(.645,.045,.355,1).6s;
+      transition: all cubic-bezier(.645,.045,.355,1).6s;
+    }
+  }
+
+  li {
+    margin-right: 20px;
+    float: left;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border: 1px solid $border-color;
+    border-radius: 20%;
+    text-align: center;
+    -webkit-transition: all cubic-bezier(.645,.045,.355,1).6s;
+    transition: all cubic-bezier(.645,.045,.355,1).6s;
+  }
+
+  .facebook-logo:hover {
+    background-color: $facebook-color;
+  }
+
+  .twitter-logo:hover {
+    background-color: $twitter-color;
+  }
+
+  .google-logo:hover {
+    background-color: $google-color;
+  }
+
+  .pocket-logo:hover {
+    background-color: $pocket-color;
+  }
+
+  i {
+    line-height: 44px;
+    color: white;
+  }
+
+  .fa {
+    color: $text-color;
+    display: inline-block;
+    width: 100%;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+
+.blog_content {
+  overflow: hidden;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  border-top: 1px solid $border-color;
+
+  &-tag {
+    max-width: 90%;
+    border-top: 1px solid $border-color;
+    margin: auto;
+
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1.3;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      overflow: hidden;
+
+      li {
+        float: left;
+
+        a {
+          text-decoration: none;
+          padding: 5px 10px;
+          background: rgba(0, 0, 0, 0.05);
+          text-transform: capitalize;
+          color: rgba(0, 0, 0, 0.6);
+          font-size: 15px;
+          border-radius: 3px;
+          margin-right: 15px;
+          margin-bottom: 25px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .blog_item {
+    min-height: inherit;
+    margin-bottom: 30px;
+
+    .blog {
+      margin-top: 30px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    letter-spacing: 1.3;
+  }
+
+  p {
+    display: none;
+  }
+
+  .blog_tags {
+    display: none;
   }
 }
