@@ -1,0 +1,5 @@
+= link_to user_path(blog.user) do
+  = attachment_image_tag blog.user,:image, :fill, 60, 60, class: 'blog_author-image'
+
+  p by #{blog.user.name}
+span #{l(blog.created_at)}

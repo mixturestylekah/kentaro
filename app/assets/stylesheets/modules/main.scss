@@ -7,4 +7,22 @@
   background-position: 50% 50%;
   position: relative;
   background-image: url("top.jpg");
+
+  &_title {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    max-width: 70%;
+    letter-spacing: 2.8;
+
+    h1 {
+      font-weight: bold;
+      font-size: 30;
+    }
+  }
 }

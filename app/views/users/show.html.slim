@@ -1,6 +1,21 @@
 .main
-  .main-image
+  .main_title
+    h1 #{@user.name}のプロフィール
 
+.user_content
+  .user_description
+    = attachment_image_tag @user ,:image, :fill, 200, 200, class: 'profile-image'
+    p= @user.name
+    p Terrame Inc. CEO
 
-=@user.name
-=@user.description
+  .user_content-right
+    .user_container
+      p= @user.description
+    .user_sns
+      p SNS
+      ul
+        li= link_to "Twitter/@KENTARO", "https://twitter.com/"
+        li= link_to "Facebook/@KENTARO", "https://facebook.com/"
+      ul
+        li= link_to "Github/@KENTARO", "https://github.com/"
+        li= link_to "Instagram/@KENTARO", "https://www.instagram.com/"

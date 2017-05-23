@@ -4,6 +4,10 @@
   z-index: 1;
   width: 100%;
 
+  a:hover {
+    color: $primary-color;
+  }
+
   @include phone {
     margin: auto;
     padding: inherit;

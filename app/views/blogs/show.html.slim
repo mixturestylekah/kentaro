@@ -1,14 +1,15 @@
 .blog-image
-  = attachment_image_tag @blog ,:image, :fill, 1280, 600, fallback: 'top.jpg', class: 'cover-image'
+  = attachment_image_tag @blog, :image, :fill, 1280, 640, fallback: 'top.jpg', class: 'cover-image'
+  = attachment_image_tag @blog, :image, :fill, 375, 570, fallback: 'top.jpg', class: "cover-image-mobile"
 
   .blog-image_text
     h1= @blog.title
 
-  .blog_author
-    
+    .blog_author
+      = render partial: 'blogs/profile', locals: { blog: @blog }
 
-.blog_edit
-  - if user_signed_in? && current_user?(@blog.user)
+- if user_signed_in? && current_user?(@blog.user)
+  .blog_edit
     = link_to "編集する", edit_blog_path(@blog), class: 'button primary-button'
     = link_to "削除する", blog_path(@blog), method: :delete, class: 'button warning-button'
 
@@ -22,9 +23,6 @@
   .blog_main-tags
     - @blog.tags.each do |tag|
       = link_to tag.name, tag, class: 'tag'
-
-  .blog_author
-    = link_to user_path(@blog.user)
 
 - if @related_blogs.any?
   h4 Related blogs
