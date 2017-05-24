@@ -1,0 +1,23 @@
+ja:
+  meta_tags:
+    application:
+      title: "Kentaro's Blog"
+      description: "Kentaro's BlogはTerrame Inc.代表取締役の青木健太郎(Aoki Kentaro)が運用しています。サービス開発や経営、採用手法など自分がためになったことを発信していきます！"
+      reverse: true
+      site: "Kentaro's Blog（けんたろうのブログ）"
+      fb:
+        app_id: "974087779286723"
+      og:
+        description: :description
+        #image: "http://kentaro.run/assets/"
+        locale: 'ja_JP'
+        site_name: "Kentaro's Blog | 誰かの成長のためになれば"
+        title: :title
+        type: "website"
+        url:  "http://kentaro.run/"
+      twitter:
+        card: "summary"
+        description: :description
+        #image: "http://kentaro.run/assets/"
+        site: "@kentaro"
+        title: :title

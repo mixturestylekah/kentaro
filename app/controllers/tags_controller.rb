@@ -4,6 +4,8 @@ class TagsController < ApplicationController
   def show
     @related_tags = @tag.related_tags
     @blogs = Blog.tagged_with(@tag.name).page(params[:page])
+
+    #set_meta_tags(tag_meta_tag(@tag))
   end
 
   private

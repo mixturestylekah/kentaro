@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: :show
 
   def show
+    #set_meta_tags(user_meta_tag(@user))
   end
 
   private

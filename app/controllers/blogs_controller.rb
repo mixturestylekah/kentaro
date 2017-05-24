@@ -17,6 +17,8 @@ class BlogsController < ApplicationController
     if request.path != blog_path(@blog)
       redirect_to @blog, status: 301
     end
+
+    #set_meta_tags(blog_meta_tag(@blog))
   end
 
   def edit

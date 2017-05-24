@@ -40,6 +40,10 @@ gem 'react-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'slim-rails'
 gem 'jbuilder', '~> 2.5'
+gem 'meta-tags'
+
+# Environment
+gem 'sitemap_generator'
 
 # Admin
 gem 'activeadmin', github: 'activeadmin'
