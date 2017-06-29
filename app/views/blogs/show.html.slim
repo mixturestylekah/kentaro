@@ -18,7 +18,20 @@
     p= @blog.description
 
   .body
-    = remove_javascript(@blog.body).html_safe
+    = @blog.body.html_safe
+
+  .author
+    .divbar
+      .authortag Author
+      .line
+    .author_item
+      = attachment_image_tag @blog.user , :image, :fill, 90, 90
+      .author_item-des
+        = link_to user_path(@blog.user) do
+          p.name #{@blog.user.name}
+        p.description #{@blog.user.description}
+        p.link = link_to "Follow me on Twitter", "https://twitter.com/"
+        p.link = link_to "Follow me on Facebook", "https://twitter.com/"
 
   .blog_main-tags
     - @blog.tags.each do |tag|

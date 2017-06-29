@@ -12,3 +12,30 @@
     margin-top: 10px;
   }
 }
+
+.navsub {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  height: 60px;
+  z-index: 1;
+  bottom: 0;
+
+  &_content {
+    float: right;
+    margin-right: 150px;
+    margin-top: 10px;
+  }
+}
+
+.blogs_controller.new_action {
+  .navsub {
+    display: none;
+  }
+}
+
+.blogs_controller.show_action {
+  .navsub {
+    display: none;
+  }
+}

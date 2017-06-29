@@ -180,25 +180,31 @@
       font-weight: bold;
       font-size: 24px;
       color: $primary-color;
+      line-height: 1.7;
     }
 
     h3 {
       font-size: 20px;
       font-weight: bold;
       color: darken($font-color, 5%);
+      line-height: 1.7;
     }
 
     blockquote {
       border-left: 5px solid $border-color;
+      line-height: 1.7;
     }
 
     p {
       font-size: 18px;
       color: $font-color;
+      font-weight: initial;
+      line-height: 2.7;
     }
 
     a {
       color: lighten($primary-color, 15%);
+      line-height: 1.7;
 
       &:hover {
         color: $primary-color;
@@ -243,9 +249,18 @@
     width: 1280px;
     height: 640px;
 
+    @include phone {
+      display: none;
+    }
+
     &-mobile {
       filter: brightness(60%);
       -webkit-filter: brightness(60%);
+      display: none;
+
+      @include phone {
+        display: initial;
+      }
     }
   }
 

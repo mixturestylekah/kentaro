@@ -2,6 +2,7 @@ $width-desktop:1024px;
 $width-tablet:768px;
 $width-smartphone:568px;
 
+// Media Queries
 @mixin desktop {
   //PC表示: 768+20=788px〜
   @media (min-width: $width-tablet) {

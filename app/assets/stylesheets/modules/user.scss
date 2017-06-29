@@ -3,10 +3,23 @@
   margin: 40px auto;
   overflow: hidden;
 
+  @include phone {
+    max-width: 90%;
+    text-align: center;
+    overflow: initial;
+  }
+
   &-right {
     float: left;
     width: 75%;
     padding-left: 50px;
+
+    @include phone {
+      float: none;
+      width: 90%;
+      padding: 10px 0;
+      margin: auto;
+    }
 
     .user_container {
       border-bottom: 1px solid $border-color;
@@ -17,9 +30,18 @@
       margin-top: 30px;
       overflow: hidden;
 
+      @include phone {
+        overflow: initial;
+      }
+
       ul {
         float: left;
         padding-right: 100px;
+
+        @include phone {
+          float: none;
+          padding: 0;
+        }
       }
 
       li {
@@ -42,6 +64,10 @@
 
   .user_description {
     float: left;
+
+    @include phone {
+      float: none;
+    }
 
     p {
       margin-top: 10px;
