@@ -1,8 +1,21 @@
 .footer
   p Kentaro's Blogは、株式会社Turtle代表取締役 青木健太郎が運営しています。
   p 株式会社Turtleと運営サービス"Turtle"も応援宜しくお願いします。
-  p= link_to "Turtle Inc.","https://twitter.com/", class: "footer_link"
-  ul
-    li= link_to "Twitter/@Turtle", "https://twitter.com/", class: "footer_link"
-    li= link_to "Facebook/@Turtle", "https://facebook.com/", class: "footer_link"
-    li= link_to "Instagram/@Turtle", "https://facebook.com/", class: "footer_link"
+  .footer-nav
+    span
+      = link_to "Twitter/@Kentaro", "https://twitter.com/"
+    span
+      = link_to "Facebook/@Kentaro", "https://facebook.com/"
+
+  .footer-image
+    = link_to image_tag ("logo.svg"), action: "https://twitter.com/"
+
+  .footer-nav
+    span
+      = link_to "Turtle 採用ページ", "https://facebook.com/"
+    span
+      = link_to "Twitter/@Turtle", "https://twitter.com/"
+    span
+      = link_to "Facebook/@Turtle", "https://facebook.com/"
+    span
+      = link_to "Instagram/@Turtle", "https://facebook.com/"

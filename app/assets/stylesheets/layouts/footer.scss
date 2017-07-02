@@ -3,9 +3,29 @@
   text-align: center;
   padding: 120px 20px;
 
+  &-image {
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
 
-  ul {
-    margin-top: 60px;
+  &-nav {
+    span {
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid white;
+      margin-bottom: 15px;
+      display: inline-block;
+
+      &:first-child {
+        border-left: none;
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      a {
+        font-size: 11px;
+      }
+    }
   }
 
   li {

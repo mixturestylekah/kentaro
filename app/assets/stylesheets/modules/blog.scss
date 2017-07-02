@@ -292,8 +292,8 @@
       background-image: url("hatena-logo-hover.svg");
       background-color: $hatena-color;
       border-radius: 20%;
-      -webkit-transition: all cubic-bezier(.645,.045,.355,1).6s;
-      transition: all cubic-bezier(.645,.045,.355,1).6s;
+      -webkit-transition: all cubic-bezier(.645,.045,.355,1).2s;
+      transition: all cubic-bezier(.645,.045,.355,1).2s;
     }
   }
 
@@ -313,8 +313,8 @@
     border: 1px solid $border-color;
     border-radius: 20%;
     text-align: center;
-    -webkit-transition: all cubic-bezier(.645,.045,.355,1).6s;
-    transition: all cubic-bezier(.645,.045,.355,1).6s;
+    -webkit-transition: all cubic-bezier(.645,.045,.355,1).2s;
+    transition: all cubic-bezier(.645,.045,.355,1).2s;
   }
 
   .facebook-logo:hover {
