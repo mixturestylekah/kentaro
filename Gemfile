@@ -75,6 +75,9 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano3-puma'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-rbenv'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
