@@ -16,7 +16,13 @@ set :stage, :production
 set :deploy_via, :remote_cache
 
 set :deploy_to, "/var/www/#{fetch(:application)}"
+set :default_env, {
+  rbenv_root: "/usr/local/rbenv",
+  path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
+  DEVISE_SECRET_KEY: ENV["DEVISE_SECRET_KEY"]
+}
 
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
@@ -74,5 +80,5 @@ namespace :deploy do
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
-  after  :finishing,    :restart
+  #after  :finishing,    :restart
 end
